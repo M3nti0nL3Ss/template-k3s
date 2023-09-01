@@ -51,12 +51,14 @@ echo "✅ k3s server is ready"
 sudo curl -o /usr/bin/kubectl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo chmod +x /usr/bin/kubectl
 
-sudo curl -o /usr/bin//minikube -LO "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
+sudo curl -o /usr/bin/minikube -LO "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
 sudo chmod +x /usr/bin/minikube
 
 curl -LO https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz
 tar -xvf k9s_Linux_amd64.tar.gz
-ls -al
+sudo cp k9s /usr/bin/k9s
+chmod +x /usr/bin/k9s
+
 kubectl get pods --all-namespaces
 
 
