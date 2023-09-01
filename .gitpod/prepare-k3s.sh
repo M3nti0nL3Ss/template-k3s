@@ -61,7 +61,7 @@ chmod +x /usr/bin/k9s
 
 kubectl get pods --all-namespaces
 
-minikube start
+minikube start --driver qemu --network builtin
 
 
 touch "${k3sreadylock}"
