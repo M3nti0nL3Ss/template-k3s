@@ -57,7 +57,7 @@ sudo chmod +x /usr/bin/minikube
 curl -LO https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz
 tar -xvf k9s_Linux_amd64.tar.gz
 sudo cp k9s /usr/bin/k9s
-chmod +x /usr/bin/k9s
+sudo chmod +x /usr/bin/k9s
 
 kubectl get pods --all-namespaces
 
